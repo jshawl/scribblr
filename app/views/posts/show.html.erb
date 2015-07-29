@@ -1,0 +1,10 @@
+<h2><%= link_to "(edit)", edit_post_path %></h2>
+<h4><%= @post.title %></h4>
+<h4><%= @post.author %></h4>
+<h4><%= @post.content %></h4>
+
+<% @comments.each do |comment| %>
+  <%= @comment.content %>
+<% end %>
+
+<%= render partial: "/comments/form" %>
