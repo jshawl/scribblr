@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
 
   # create
   def create
-    @user = User.find(session[:user]["id"])
     @post = Post.find(params[:post_id])
     @comments = @post.comments.create(comment_params)
     redirect_to post_path(@post)
@@ -23,7 +22,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @post = Post.find(params[:post_id])
     @comment = Comment.new
-    @comments = Comment.all
+    # @comments = Comment.all
   end
 
   # edit
