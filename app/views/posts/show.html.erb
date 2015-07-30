@@ -3,8 +3,14 @@
 <h4><%= @post.author %></h4>
 <h4><%= @post.content %></h4>
 
+
+
 <% @comments.each do |comment| %>
+
   <%= @comment.content %>
+
 <% end %>
 
 <%= render partial: "/comments/form" %>
+
+<%= render partial: "/comments/show" %>

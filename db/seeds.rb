@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Comment.destroy_all
+Post.destroy_all
+
+
+post1 = Post.create(title: "First Post!", author: "Sam", content: "This is my first post! This is my first post! This is my first post! This is my first post! This is my first post!")
+post2 = Post.create(title: "Second Post!", author: "Sam", content: "This is my second post! This is my second post! This is my second post! This is my second post! ")
+post3 = Post.create(title: "Third Post!", author: "Sam", content: "This is my third post! This is my third post! This is my third post! This is my third post! ")
+
+
+comment1 = Comment.create(author: "Sam", content: "Awesome blog!")
