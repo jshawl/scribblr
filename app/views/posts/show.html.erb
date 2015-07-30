@@ -4,7 +4,7 @@
 <h4><%= @post.content %></h4>
 
 <% @comments.each do |comment| %>
-  <%= @comment.content %>
+  <%= comment.content %>
 <% end %>
 
 <%= render partial: "/comments/form" %>
