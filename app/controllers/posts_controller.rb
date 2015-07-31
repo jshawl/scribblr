@@ -4,7 +4,11 @@ class PostsController < ApplicationController
 
   #index
   def index
-    @posts = User.find(session[:user]["id"]).posts
+    if session[:user] == nil
+      @posts = Post.all
+    else
+      @posts = User.find(session[:user]["id"]).posts
+    end
   end
 
   #new
