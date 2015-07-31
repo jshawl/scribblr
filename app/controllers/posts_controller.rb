@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
+  # skip_before_action :authenticate
+
 
   #index
   def index
-    @posts = User.find(session[:user]["id"]).posts
+    @posts = User.find(session[:user]["id"])
     @posts = Post.all.order(:id).reverse
   end
 

@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate
 
-  
   def sign_up
   end
 
@@ -42,6 +41,7 @@ class UsersController < ApplicationController
   def sign_out
     flash[:notice] = "You're signed out!"
     redirect_to root_url
+    reset_session
   end
 
 end
