@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
+  # skip_before_action :authenticate
+
 
   #index
   def index
+    @posts = User.find(session[:user]["id"])
     @posts = Post.all.order(:id).reverse
   end
 
@@ -12,6 +15,8 @@ class PostsController < ApplicationController
 
   #create
   def create
+    @user = User.find(session[:user]["id"])
+    @post = @user.posts.create!(post_params)
     @post = Post.new(post_params)
     if @post.save
       redirect_to post_path(@post)

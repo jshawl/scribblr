@@ -7,10 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>scribblr</h1>
+  <nav>
+    <% if session[:user] %>
+      <a href="/sign_out"><%= session[:user]["username"] %>: sign out</a></h2>
+    <% else %>
+      <a href="/sign_up">Sign up</a>
+      <a href="/sign_in">Sign in</a>
+    <% end %>
+    <a href="/posts">Posts</a>
+  </nav>
+  <h2><%= flash[:notice] %></h2>
+
 
 <%= link_to "Home", posts_path %>
 
 <%= yield %>
+
 
 </body>
 </html>

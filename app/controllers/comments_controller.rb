@@ -20,6 +20,9 @@ class CommentsController < ApplicationController
   # show
   def show
     @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new
+    # @comments = Comment.all
   end
 
   # edit
