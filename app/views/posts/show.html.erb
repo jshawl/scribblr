@@ -4,6 +4,7 @@
 <h4><%= @post.content %></h4>
 
 <% @comments.each do |comment| %>
+  <%= comment.author %>
   <%= comment.content %>
 <% end %>
 
