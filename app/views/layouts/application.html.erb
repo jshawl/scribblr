@@ -6,26 +6,29 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-  <ul>
-  <li><%= image_tag "logo.jpg" %></li>
-  <li><%= link_to "Home", posts_path %></li>
-  <li><a href="/posts">Posts</a></li>
-  </ul>
+<body>
+  <div class="meat">
+    <ul>
+    <li><%= image_tag "logo.jpg" %></li>
+    <li><%= link_to "Home", posts_path %></li>
+    <li><a href="/posts">Posts</a></li>
+    </ul>
 
-<div class="wrap">
-    <nav>
-      <% if session[:user] %>
-        <a href="/sign_out"><%= session[:user]["username"] %>: sign out</a>
-      <% else %>
-        <a href="/sign_in">Sign in</a>
-        <a href="/sign_up">Sign up</a>
-      <% end %>
-    </nav>
-    <h2><%= flash[:notice] %></h2>
+    <div class="wrap">
+      <nav>
+        <% if session[:user] %>
+          <a href="/sign_out"><%= session[:user]["username"] %>: sign out</a>
+        <% else %>
+          <a href="/sign_in">Sign-in |</a>
+          <a href="/sign_up">| Sign-up</a>
+        <% end %>
+      </nav>
+      <h2><%= flash[:notice] %></h2>
 
 
-  <%= yield %>
+      <%= yield %>
 
-</div>
+    </div>
+  </div>
 </body>
 </html>

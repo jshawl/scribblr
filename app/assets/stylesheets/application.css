@@ -1,5 +1,23 @@
+nav{
+  position: relative;
+  margin-left: 100px;
+  margin-top: -200px;
+}
+
 img{
-  width: 17%;
+  width: 35%;
+}
+
+body{
+  background: #4c0000;
+  line-height: 1.5em;
+}
+
+.meat{
+  margin-left: 20%;
+  margin-right: 20%;
+  background: #ffffff;
+  padding-bottom: 80%;
 }
 
 ul{
@@ -15,13 +33,17 @@ a:link {
     text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 a:visited {
     color: #B82E00;
     text-decoration: none;
 }
 
 .wrap{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
   background: #ffffff;
 }
