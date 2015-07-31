@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+
 Comment.destroy_all
 Post.destroy_all
 
@@ -16,4 +17,4 @@ post2 = Post.create(title: "Second Post!", author: "Sam", content: "This is my s
 post3 = Post.create(title: "Third Post!", author: "Sam", content: "This is my third post! This is my third post! This is my third post! This is my third post! ")
 
 
-comment1 = Comment.create(author: "Sam", content: "Awesome blog!")
+comment1 = Comment.create(author: "Sam", content: "Awesome blog!", post_id: post1.id)

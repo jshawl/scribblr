@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    @comments = Comment.all  #trying to get comments to show in the post show view
+    @comments = Comment.where(post_id:params[:id]) #trying to get comments to show in the post show view
   end
 
   # edit
