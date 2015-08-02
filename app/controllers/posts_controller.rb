@@ -20,6 +20,8 @@ class PostsController < ApplicationController
   def create
     @user = User.find(session[:user]["id"])
     @post = @user.posts.create!(post_params)
+    # if you want to use the current user as the author:
+    # @user.posts.create!(post_params.merge(author: @user))
       redirect_to post_path(@post)
   end
 
@@ -28,6 +30,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = Comment.where(post_id:params[:id]) #trying to get comments to show in the post show view
+    # or @post.comments
   end
 
   # edit

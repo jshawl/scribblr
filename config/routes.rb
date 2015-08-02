@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
 
 
+  # please remove commented out code in the future.
   # get "/" => "posts#index"
   # get "posts/new" => "posts#new"
   # post "posts" => "posts#create"
